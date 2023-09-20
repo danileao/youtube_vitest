@@ -1,5 +1,4 @@
 import Fastify from "fastify";
-import crypto from "crypto"
 import { User, UserService } from "./modules/user/user.service";
 import { AppError } from "./error/app.error";
 
@@ -33,7 +32,6 @@ app.post('/users', (request, reply) => {
         return users;
 
     } catch (err) {
-        console.log("Erro")
         reply.code(400).send()
     }
 })
